@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER "jang docker <janhyooao@gmail.com>"
 LABEL "purpose"="practice"
 RUN apt-get update && apt-get -y install apache2
-ADD test.html /var/www/html
+ADD ./test.html /var/www/html
 WORKDIR /var/www/html
 RUN ["/bin/bash", "-c", "echo hello >> test.html"]
 EXPOSE 80
